@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+}
+
+.demo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.component {
+  border: solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+.angular {
+  width: 500px;
+}
+
+.react {
+  width: 300px;
+}

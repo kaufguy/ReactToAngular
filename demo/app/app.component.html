@@ -1,0 +1,13 @@
+<h1>ReactToAngular</h1>
+<div class="demo">
+  <div class="component angular">
+    <span>
+      <p>Angular Component</p>
+      <input id="name-input" type="text" [(ngModel)]="name">
+    </span>
+    <div class="component react">
+      <hello [props]="{name: name}"></hello>
+    </div>
+  </div>
+
+</div>
