@@ -1,5 +1,5 @@
 {
-  "name": "react-to-angular",
+  "name": "react-to-angular-wrapper",
   "version": "0.0.0",
   "main": "@src/reactWrapper.js",
   "scripts": {
@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
