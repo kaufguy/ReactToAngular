@@ -1,9 +1,62 @@
-# ReactToAngular
+ReactToAngular
+==============
+ReactToAngular is a simple wrapper that you can place around any React component, to be used inside any Angular application.
 
+## Installation
 
+```bash
+npm install
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+## Demo
 
-###### Development server
+```bash
+npm run start
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Usage
+
+```javascript
+// Manage all your imported React components by mapping them to a selector.
+import { SomeReactComponent } from './SomeReactComponent.js';
+
+export const ReactComponents: Array<any> = [
+  {
+    selector: 'reactComponentSelector',
+    component: SomeReactComponent
+  }
+];
+```
+
+```javascript
+// Declare your imported React components in the module
+import {ReactComponents} from './react-to-export';
+import { createReactToAngularComponent } from '@src/reactWrapper';
+
+const reactToExport = [];
+ReactComponents.forEach((comp) => {
+  reactToExport.push(createReactToAngularComponent(comp));
+});
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    reactToExport
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  exports: [
+    reactToExport
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+```html
+// Use the react component naturally as an Angular component. Just pass the [props] for React.
+<reactComponentSelector [props]="{}"></reactComponentSelector>
+```
