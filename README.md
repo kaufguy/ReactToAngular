@@ -31,7 +31,7 @@ export const ReactComponents: Array<any> = [
 ```javascript
 // Declare your imported React components in the module
 import {ReactComponents} from './react-to-export';
-import { createReactToAngularComponent } from '@src/reactWrapper';
+import { createReactToAngularComponent } from 'reactWrapper';
 
 const reactToExport = [];
 ReactComponents.forEach((comp) => {

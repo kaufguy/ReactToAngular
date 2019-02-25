@@ -1,7 +1,7 @@
 {
   "name": "react-to-angular-wrapper",
   "version": "0.0.1",
-  "main": "@src/reactWrapper.js",
+  "main": "reactWrapper.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
