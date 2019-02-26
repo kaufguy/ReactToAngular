@@ -1,5 +1,5 @@
 {
-  "name": "react-to-angular",
+  "name": "react-to-angular-wrapper",
   "version": "0.0.4",
   "main": "lib/reactWrapper.js",
   "scripts": {
@@ -11,6 +11,11 @@
     "e2e": "ng e2e",
     "publish-build": "tsc -p tsconfig.publish.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaufguy/ReactToAngular.git"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "angular": "<=7.0.0",
     "react": ">=0.14.2",
