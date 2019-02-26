@@ -14,6 +14,12 @@ npm install
 npm run start
 ```
 
+## npm
+
+```bash
+npm install react-to-angular-wrapper
+```
+
 # Usage
 
 ```javascript
