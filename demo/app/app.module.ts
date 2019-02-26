@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {ReactComponents} from './react-to-export';
-import { createReactToAngularComponent } from 'reactWrapper';
+import { createReactToAngularComponent } from 'react-to-angular-wrapper';
 
 // usage example
 const reactToExport = [];

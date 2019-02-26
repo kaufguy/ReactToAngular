@@ -1,16 +1,22 @@
 {
-  "name": "react-to-angular-wrapper",
-  "version": "0.0.2",
-  "main": "reactWrapper.js",
+  "name": "react-to-angular",
+  "version": "0.0.4",
+  "main": "lib/reactWrapper.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "start": "npm run publish-build && ng serve",
+    "build": "npm run publish-build && ng build",
+    "test": "npm run publish-build && ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish-build": "tsc -p tsconfig.publish.json"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "angular": "<=7.0.0",
+    "react": ">=0.14.2",
+    "react-dom": ">=0.14.2"
+  },
+  "devDependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
@@ -20,13 +26,12 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-to-angular-wrapper": "0.0.3",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
-  "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "~7.3.1",
     "@angular/compiler-cli": "~7.2.0",
@@ -46,5 +51,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
